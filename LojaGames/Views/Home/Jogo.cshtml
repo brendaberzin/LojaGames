@@ -1,0 +1,91 @@
+﻿@model LojaGames.Models.Jogo
+@{
+    ViewBag.Title = "Jogo";
+}
+
+<h2>Cadastrar Jogo</h2>
+@using (Html.BeginForm())
+{
+    @Html.ValidationSummary(true)
+    <fieldset>
+        <div class="editor-label">
+            @Html.LabelFor(m => m.JogoCod)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(m => m.JogoCod)
+            @Html.ValidationMessageFor(m => m.JogoCod)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(m => m.JogoNome)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(m => m.JogoNome)
+            @Html.ValidationMessageFor(m => m.JogoNome)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(m => m.JogoVersao)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(m => m.JogoVersao)
+            @Html.ValidationMessageFor(m => m.JogoVersao)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(m => m.JogoDev)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(m => m.JogoDev)
+            @Html.ValidationMessageFor(m => m.JogoDev)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(m => m.JogoGen)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(m => m.JogoGen)
+            @Html.ValidationMessageFor(m => m.JogoGen)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(m => m.JogoFxEt)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(m => m.JogoFxEt)
+            @Html.ValidationMessageFor(m => m.JogoFxEt)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(m => m.JogoPlat)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(m => m.JogoPlat)
+            @Html.ValidationMessageFor(m => m.JogoPlat)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(m => m.JogoAnoLanc)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(m => m.JogoAnoLanc)
+            @Html.ValidationMessageFor(m => m.JogoAnoLanc)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(m => m.JogoSin)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(m => m.JogoSin)
+            @Html.ValidationMessageFor(m => m.JogoSin)
+        </div>
+
+        <br />
+        <div>
+            <input type="submit" value="Cadastrar" name="btnEnviarJogo" />
+        </div>
+    </fieldset>
+
+    //@section Scripts{@Scripts.Render("~/bundles/jqueryval")}
+}
+

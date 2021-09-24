@@ -1,0 +1,66 @@
+﻿@model LojaGames.Models.Cliente
+@{
+    ViewBag.Title = "Cliente";
+}
+
+<h2>Cadastrar Cliente</h2>
+@using (Html.BeginForm())
+{
+    @Html.ValidationSummary(true)
+    <fieldset>
+        <div class="editor-label">
+            @Html.LabelFor(m => m.CliNome)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(m => m.CliNome)
+            @Html.ValidationMessageFor(m => m.CliNome)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(m => m.CliCpf)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(m => m.CliCpf)
+            @Html.ValidationMessageFor(m => m.CliCpf)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(m => m.CliDtNasc)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(m => m.CliDtNasc)
+            @Html.ValidationMessageFor(m => m.CliDtNasc)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(m => m.CliEmail)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(m => m.CliEmail)
+            @Html.ValidationMessageFor(m => m.CliEmail)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(m => m.CliCel)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(m => m.CliCel)
+            @Html.ValidationMessageFor(m => m.CliCel)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(m => m.CliEnd)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(m => m.CliEnd)
+            @Html.ValidationMessageFor(m => m.CliEnd)
+        </div>
+
+        <br />
+        <div>
+            <input type="submit" value="Cadastrar" />
+        </div>
+    </fieldset>
+
+    @section Scripts{@Scripts.Render("~/bundles/jqueryval")}
+}
